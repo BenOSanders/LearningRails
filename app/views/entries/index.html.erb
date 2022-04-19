@@ -1,0 +1,11 @@
+<% content_for :title do%>
+  Foodlog &ndash; <%= DateTime.now %>
+<% end %>
+
+
+<div id="entries">
+  <% @entries.each do |entry| %>
+    <%= render entry %>
+      <%= link_to "Show this entry", entry %>
+  <% end %>
+</div>
